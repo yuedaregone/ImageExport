@@ -1,0 +1,381 @@
+
+cards.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+a1
+  rotate: false
+  xy: 1, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a10
+  rotate: false
+  xy: 1, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a11
+  rotate: false
+  xy: 253, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a12
+  rotate: false
+  xy: 1, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a13
+  rotate: false
+  xy: 253, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a2
+  rotate: false
+  xy: 505, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a3
+  rotate: false
+  xy: 1, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a4
+  rotate: false
+  xy: 253, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a5
+  rotate: false
+  xy: 505, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a6
+  rotate: false
+  xy: 757, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a7
+  rotate: false
+  xy: 1, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a8
+  rotate: false
+  xy: 253, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+a9
+  rotate: false
+  xy: 505, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b1
+  rotate: false
+  xy: 757, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b10
+  rotate: false
+  xy: 1009, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b11
+  rotate: false
+  xy: 253, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b12
+  rotate: false
+  xy: 505, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b13
+  rotate: false
+  xy: 757, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b2
+  rotate: false
+  xy: 1009, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b3
+  rotate: false
+  xy: 1261, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b4
+  rotate: false
+  xy: 505, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b5
+  rotate: false
+  xy: 757, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b6
+  rotate: false
+  xy: 1009, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b7
+  rotate: false
+  xy: 1261, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b8
+  rotate: false
+  xy: 1513, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+b9
+  rotate: false
+  xy: 757, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+backCard
+  rotate: false
+  xy: 1009, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c1
+  rotate: false
+  xy: 1261, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c10
+  rotate: false
+  xy: 1513, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c11
+  rotate: false
+  xy: 1765, 1409
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c12
+  rotate: false
+  xy: 1009, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c13
+  rotate: false
+  xy: 1261, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c2
+  rotate: false
+  xy: 1513, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c3
+  rotate: false
+  xy: 1765, 1057
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c4
+  rotate: false
+  xy: 1261, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c5
+  rotate: false
+  xy: 1513, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c6
+  rotate: false
+  xy: 1765, 705
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c7
+  rotate: false
+  xy: 1513, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c8
+  rotate: false
+  xy: 1765, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+c9
+  rotate: false
+  xy: 1765, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+
+cards2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+d1
+  rotate: false
+  xy: 1, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d10
+  rotate: false
+  xy: 1, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d11
+  rotate: false
+  xy: 253, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d12
+  rotate: false
+  xy: 253, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d13
+  rotate: false
+  xy: 505, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d2
+  rotate: false
+  xy: 505, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d3
+  rotate: false
+  xy: 757, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d4
+  rotate: false
+  xy: 757, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d5
+  rotate: false
+  xy: 1009, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d6
+  rotate: false
+  xy: 1009, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d7
+  rotate: false
+  xy: 1261, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d8
+  rotate: false
+  xy: 1261, 1
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
+d9
+  rotate: false
+  xy: 1513, 353
+  size: 250, 350
+  orig: 250, 350
+  offset: 0, 0
+  index: -1
