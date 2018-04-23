@@ -46,7 +46,7 @@ MImage::~MImage()
 
 bool MImage::initWithFile(const char* fileName, MImageType _type)
 {
-	FILE* fp = NULL;
+	FILE* fp = NULL;	
 	if ((fp = fopen(fileName, "rb")) == NULL)
 	{
 		printf("Open file error!");
@@ -110,12 +110,11 @@ bool MImage::initWithPngData(void* _data, size_t _len)
 		m_nBitsPerComponent = png_get_bit_depth(png_ptr, info_ptr);
 		png_uint_32 color_type = png_get_color_type(png_ptr, info_ptr);
 
-		//CCLOG("color type %u", color_type);
-
+		//CCLOG("color type %u", color_type);		
 		// force palette images to be expanded to 24-bit RGB
 		// it may include alpha channel
 		if (color_type == PNG_COLOR_TYPE_PALETTE)
-		{
+		{			
 			png_set_palette_to_rgb(png_ptr);
 		}
 		// low-bit-depth grayscale images are to be expanded to 8 bits
@@ -198,3 +197,86 @@ size_t MImage::getDataSize()
 	}
 	return m_nHeight*m_nWidth * pixelLen;
 }
+
+void write_png(const char *file_name, int width, int height, unsigned char* image)  
+{  
+    FILE *fp = fopen(file_name, "wb");
+    if (fp == NULL)  
+    	return;  
+
+    png_structp png_ptr;  
+    png_infop info_ptr;  
+    png_colorp palette;     
+   
+    png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);  
+  
+    if (png_ptr == NULL)  
+    {  
+		printf("error1\n");
+      fclose(fp);  
+      return;  
+    }    
+   /* 分配内存并初始化图像信息数据。（必要）*/  
+   info_ptr = png_create_info_struct(png_ptr);  
+   if (info_ptr == NULL)  
+   {  
+	   printf("error2\n");
+      fclose(fp);  
+      png_destroy_write_struct(&png_ptr,  NULL);  
+      return;  
+   }  
+  
+   /* 设置错误处理。如果你在调用 png_create_write_struct() 时没 
+    * 有设置错误处理函数，那么这段代码是必须写的。*/  
+   if (setjmp(png_jmpbuf(png_ptr)))  
+   {  
+      /* 如果程序跑到这里了，那么写入文件时出现了问题 */  
+	  printf("error3\n");
+      fclose(fp);  
+      png_destroy_write_struct(&png_ptr, &info_ptr);  
+      return;  
+   }  
+  
+   /* 设置输出控制，如果你使用的是 C 的标准 I/O 流 */  
+   png_init_io(png_ptr, fp);  
+  
+   /* 这是一种复杂的做法 */  
+  
+   /* （必需）在这里设置图像的信息，宽度、高度的上限是 2^31。 
+    * bit_depth 取值必需是 1、2、4、8 或者 16, 但是可用的值也依赖于 color_type。 
+    * color_type 可选值有： PNG_COLOR_TYPE_GRAY、PNG_COLOR_TYPE_GRAY_ALPHA、 
+    * PNG_COLOR_TYPE_PALETTE、PNG_COLOR_TYPE_RGB、PNG_COLOR_TYPE_RGB_ALPHA。 
+    * interlace 可以是 PNG_INTERLACE_NONE 或 PNG_INTERLACE_ADAM7, 
+    * 而 compression_type 和 filter_type 目前必需是 PNG_COMPRESSION_TYPE_BASE 
+    * 和 and PNG_FILTER_TYPE_BASE。 
+    */  
+   png_set_IHDR(png_ptr, info_ptr, width, height, 8, PNG_COLOR_TYPE_RGB_ALPHA,  
+      PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);  
+  
+   /* 写入文件头部信息（必需） */  
+   png_write_info(png_ptr, info_ptr);  
+  
+   png_uint_32 k;  
+  
+   /* 在这个示例代码中，"image" 是一个一维的字节数组（每个元素占一个字节空间） */      
+  
+   unsigned char* row_pointers[2048];  
+  
+   if (height > PNG_UINT_32_MAX/(sizeof (png_bytep)))  
+     png_error (png_ptr, "Image is too tall to process in memory");  
+  
+   /* 将这些像素行指针指向你的 "image" 字节数组中对应的位置，即：指向每行像素的起始处 */  
+   for (k = 0; k < height; k++)  
+     row_pointers[k] = image + k*width*4;  
+  
+   /* 一次调用就将整个图像写进文件 */  
+   png_write_image(png_ptr, row_pointers);  
+   /* 必需调用这个函数完成写入文件其余部分 */  
+   png_write_end(png_ptr, info_ptr);  
+   /* 写完后清理并释放已分配的内存 */  
+   png_destroy_write_struct(&png_ptr, &info_ptr);  
+   /* 关闭文件 */  
+   fclose(fp);  
+  
+   
+}  

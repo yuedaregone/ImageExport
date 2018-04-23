@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "map": "cpp",
+        "system_error": "cpp",
+        "xlocale": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "xiosbase": "cpp",
+        "iosfwd": "cpp"
+    }
+}

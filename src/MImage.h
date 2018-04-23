@@ -35,4 +35,7 @@ private:
 	bool m_bHasAlpha;
 	bool m_bPreMulti;
 };
+
+void write_png(const char *file_name, int width, int height, unsigned char* image);
+
 #endif
